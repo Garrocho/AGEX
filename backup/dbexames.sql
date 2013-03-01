@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 3.5.6
--- http://www.phpmyadmin.net
---
--- Máquina: localhost
--- Data de Criação: 01-Mar-2013 às 18:07
--- Versão do servidor: 5.1.45-community-log
--- versão do PHP: 5.3.2
-
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
@@ -25,6 +16,15 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `agenda`
 --
+
+
+SET FOREIGN_KEY_CHECKS=0;
+
+CREATE DATABASE `dbExames`
+    CHARACTER SET 'latin1'
+    COLLATE 'latin1_swedish_ci';
+
+USE `dbexames`;
 
 CREATE TABLE IF NOT EXISTS `agenda` (
   `dataHora` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
