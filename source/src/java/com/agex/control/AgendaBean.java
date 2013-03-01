@@ -14,7 +14,8 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
 /**
- *
+ * Responsável por tratar as regras de negócio da entidade Agenda.
+ * 
  * @author Charles Garrocho
  */
 public class AgendaBean {

@@ -10,7 +10,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 /**
- *
+ * Responsável por persistir e buscar objetos da entidade Agenda no banco de dados.
+ * 
  * @author Charles Garrocho
  */
 public class AgendaDAO {

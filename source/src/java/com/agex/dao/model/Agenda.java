@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.agex.dao.model;
 
 import java.io.Serializable;
@@ -19,7 +15,8 @@ import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- *
+ * Entidade relacionada a tabela Agenda do Banco de Dados.
+ * 
  * @author Charles Garrocho
  */
 @Entity

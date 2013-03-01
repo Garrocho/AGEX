@@ -22,7 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- *
+ * Entidade relacionada a tabela Paciente do Banco de Dados.
+ * 
  * @author Charles Garrocho
  */
 @Entity

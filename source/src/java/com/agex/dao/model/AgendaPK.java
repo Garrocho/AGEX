@@ -10,7 +10,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 /**
- *
+ * Entidade relacionada a tabela AgendaPK do Banco de Dados.
+ * 
  * @author Charles Garrocho
  */
 @Embeddable

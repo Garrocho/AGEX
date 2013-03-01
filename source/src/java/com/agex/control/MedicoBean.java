@@ -11,7 +11,8 @@ import javax.faces.context.FacesContext;
 import javax.faces.application.FacesMessage;
 
 /**
- *
+ * Responsável por tratar as regras de negócio da entidade Medico.
+ * 
  * @author Charles Garrocho
  */
 public class MedicoBean {

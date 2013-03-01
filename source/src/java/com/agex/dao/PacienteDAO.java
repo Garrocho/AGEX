@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.agex.dao;
 
 import com.agex.dao.model.Paciente;
@@ -14,7 +10,8 @@ import javax.persistence.Query;
 import org.hibernate.HibernateException;
 
 /**
- *
+ * Responsável por persistir e buscar objetos da entidade Paciente no banco de dados.
+ * 
  * @author Charles Garrocho
  */
 public class PacienteDAO {

@@ -10,7 +10,8 @@ import javax.persistence.Query;
 import org.hibernate.HibernateException;
 
 /**
- *
+ * Responsável por persistir e buscar objetos da entidade Medico no banco de dados.
+ * 
  * @author Charles Garrocho
  */
 public class MedicoDAO {
