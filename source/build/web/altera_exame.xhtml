@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>AGEX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+   <div class="container">
+        <f:view>
+            <h:head>
+                <title>Alteração de Exame</title>
+            </h:head>
+            <h:body>
+                <ui:include src="cabecalho.xhtml" />
+                
+                <legend>Alteração de Exame</legend>
+                <h:form class="form-horizontal" id="formulario">
+                    
+                    <div class="control-group">
+                    
+                        <label class="control-label" >Nome do Exame</label>
+                        <div class="controls">
+                            <h:inputText id="nome" value="#{ExameBean.nome}" /> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Valor</label>
+                        <div class="controls">
+                            <h:inputText id="valor" value="#{ExameBean.valor}"/> <br/><br/>
+                        </div>
+
+                        <br/>
+                        <h:commandButton class="btn btn-primary" action="#{ExameBean.alterar()}" value="Alterar" />
+                        
+                        <br/>
+                        <div id="box">
+                            <h:messages for="cadastro"/>
+                        </div>
+                  </div>
+                </h:form>
+            </h:body>
+        </f:view>
+    </div>
+</html>

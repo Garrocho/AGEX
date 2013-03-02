@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+   <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>AGEX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+   <div class="container">
+        <f:view>
+            <h:head>
+                <title>Cadastro de Paciente</title>
+            </h:head>
+            <h:body>
+                <ui:include src="cabecalho.xhtml" />
+                
+                <legend>Cadastro de Paciente</legend>
+                <h:form class="form-horizontal" id="formulario">
+                    
+                    <div class="control-group">
+                    
+                        <label class="control-label" >Nome do Paciente</label>
+                        <div class="controls">
+                            <h:inputText id="nome" value="#{PacienteBean.nome}" /> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Data Nascimento</label>
+                        <div class="controls">
+                            <h:inputText id="dataNasc" value="#{PacienteBean.dataNasc}">
+                                        <f:convertDateTime pattern="dd/MM/yyyy" />
+                                  </h:inputText> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Logradouro</label>
+                        <div class="controls">
+                            <h:inputText id="logradouro" value="#{PacienteBean.logradouro}"/> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Numero</label>
+                        <div class="controls">
+                            <h:inputText id="numero" value="#{PacienteBean.numero}"/> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Bairro</label>
+                        <div class="controls">
+                            <h:inputText id="bairro" value="#{PacienteBean.bairro}"/> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Cidade</label>
+                        <div class="controls">
+                            <h:inputText id="cidade" value="#{PacienteBean.cidade}"/> <br/><br/>
+                        </div>
+                    
+                        <label class="control-label" >UF</label>
+                        <div class="controls">
+                            <h:selectOneMenu value="#{PacienteBean.uf}">  
+                                <f:selectItem itemValue="AC" itemLabel="Acre"/> 
+                                <f:selectItem itemValue="AL" itemLabel="Alagoas"/>  
+                                <f:selectItem itemValue="AP" itemLabel="Amapá"/>  
+                                <f:selectItem itemValue="AM" itemLabel="Amazonas"/>  
+                                <f:selectItem itemValue="BA" itemLabel="Bahia"/>  
+                                <f:selectItem itemValue="CE" itemLabel="Ceará"/>  
+                                <f:selectItem itemValue="DF" itemLabel="Distrito Federal"/>  
+                                <f:selectItem itemValue="ES" itemLabel="Espírito Santo"/>
+                                <f:selectItem itemValue="GO" itemLabel="Goiais"/>
+                                <f:selectItem itemValue="MA" itemLabel="Maranhão"/>  
+                                <f:selectItem itemValue="MT" itemLabel="Mato Grosso"/> 
+                                <f:selectItem itemValue="MS" itemLabel="Mato Grosso do Sul"/> 
+                                <f:selectItem itemValue="MG" itemLabel="Minas Gerais"/>
+                                <f:selectItem itemValue="PR" itemLabel="Paraná"/>
+                                <f:selectItem itemValue="PB" itemLabel="Paraíba"/>  
+                                <f:selectItem itemValue="PA" itemLabel="Pará"/>  
+                                <f:selectItem itemValue="PE" itemLabel="Pernambuco"/>  
+                                <f:selectItem itemValue="PI" itemLabel="Piauí"/> 
+                                <f:selectItem itemValue="RJ" itemLabel="Rio de Janeiro"/>  
+                                <f:selectItem itemValue="RN" itemLabel="Rio Grande do Norte"/>  
+                                <f:selectItem itemValue="RS" itemLabel="Rio Grande do Sul"/>  
+                                <f:selectItem itemValue="RO" itemLabel="Rondonia"/>  
+                                <f:selectItem itemValue="RR" itemLabel="Roraima"/>  
+                                <f:selectItem itemValue="SC" itemLabel="Santa Catarina"/>
+                                <f:selectItem itemValue="SE" itemLabel="Sergipe"/>                            
+                                <f:selectItem itemValue="SP" itemLabel="São Paulo"/>
+                                <f:selectItem itemValue="TO" itemLabel="Tocantis"/>      
+                            </h:selectOneMenu>
+                        </div>
+                        <br/>
+                        <h:commandButton class="btn btn-primary" action="#{PacienteBean.cadastrar()}" value="Cadastrar" />
+                        
+                        <br/>
+                        <div id="box">
+                            <h:messages for="cadastro"/>
+                        </div>
+                  </div>
+                </h:form>
+            </h:body>
+        </f:view>
+    </div>
+</html>

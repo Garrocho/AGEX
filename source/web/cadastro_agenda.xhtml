@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>AGEX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+   <div class="container">
+        <f:view>
+            <h:head>
+                <title>Cadastro Agendamento Exames</title>
+            </h:head>
+            <h:body>
+                <ui:include src="cabecalho.xhtml" />
+                
+                <legend>Cadastro Agendamento Exames</legend>
+                <h:form class="form-horizontal" id="formulario">
+                    
+                    <div class="control-group">
+                    
+                        <label class="control-label" >Data</label>
+                        <div class="controls">
+                           <h:inputText id="dataHora" value="#{AgendaBean.dataHora}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:inputText> <br/><br/>
+                        </div>
+                        
+
+                        <label class="control-label" >Médico</label>
+                        <div class="controls">
+                            <h:selectOneMenu value="#{AgendaBean.idMedico}" id="medico">
+                                <f:selectItems value="#{MedicoBean.medicosBean}" var="med" itemLabel="#{med.nome}" itemValue="#{med.idMedico}"/>
+                            </h:selectOneMenu> <br/><br/>
+                        </div>
+                        
+                        <label class="control-label" >Exame</label>
+                        <div class="controls">
+                            <h:selectOneMenu value="#{AgendaBean.idExame}" id="exame">
+                                <f:selectItems value="#{ExameBean.examesBean}" var="exa" itemLabel="#{exa.nome}" itemValue="#{exa.idExame}"/>
+                            </h:selectOneMenu> <br/><br/>
+                        </div>
+
+                        <label class="control-label" >Paciente</label>
+                        <div class="controls">
+                            <h:selectOneMenu value="#{AgendaBean.idPaciente}" id="paciente">
+                                <f:selectItems value="#{PacienteBean.pacientesBean}" var="pac" itemLabel="#{pac.nome}" itemValue="#{pac.id}"/>
+                            </h:selectOneMenu> <br/><br/>
+                        </div>
+                        
+                        <label class="control-label" >Observação</label>
+                        <div class="controls">
+                            <h:inputText value="#{AgendaBean.obs}" id="obs"/> <br/><br/>
+                        </div>
+                        
+                        <label class="control-label" >Resultado</label>
+                        <div class="controls">
+                            <h:inputTextarea value="#{AgendaBean.resultado}" rows="6" cols="40" id="resultado"/> <br/><br/>
+                        </div>
+
+                        <br/>
+                        <h:commandButton class="btn btn-primary" action="#{AgendaBean.cadastrar()}" value="Cadastrar" />
+                        
+                        <br/>
+                        <div id="box">
+                            <h:messages for="cadastro"/>
+                        </div>
+                  </div>
+                </h:form>
+            </h:body>
+        </f:view>
+    </div>
+</html>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>AGEX</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+   <div class="container">
+        <f:view>
+            <h:head>
+                <title>Listagem de Exame</title>
+            </h:head>
+            <h:body>
+                <ui:include src="cabecalho.xhtml" />
+                
+                <legend>Listagem de Exame</legend>
+            <h:form>
+
+                <h:dataTable value="#{ExameBean.listar()}" var="exame" id="listaExames" 
+                             border="2" styleClass="table table-striped" columnClasses=",span5,,span4,,,span3,,">
+                    <f:facet name="header">
+                        <h:outputText value="Exames" styleClass="lead"/>
+                    </f:facet>
+
+                    <h:column headerClass="colunas">
+                        <f:facet name="header">
+                            <h:outputText value="ID"/>
+                        </f:facet>
+                        <h:outputText value="#{exame.idExame}"/>
+                    </h:column>
+
+                    <h:column headerClass="colunas">
+                        <f:facet name="header">
+                            <h:outputText value="Nome"/>
+                        </f:facet>
+                        <h:outputText value="#{exame.nome}"/>
+                    </h:column>
+
+                    <h:column headerClass="colunas">
+                        <f:facet name="header">
+                            <h:outputText value="Valor"/>
+                        </f:facet>
+                        <h:outputText value="#{exame.valor}"/>  
+                    </h:column>
+                
+                    <h:column headerClass="colunas">
+                    <h:commandButton action="#{ExameBean.buscar()}" value="Alterar" styleClass="btn btn-info">
+                            <f:param name="idExame" value="#{exame.idExame}"/>
+                        </h:commandButton>
+                    </h:column>
+
+                    <h:column headerClass="colunas">
+                        <h:commandButton action="#{ExameBean.excluir()}" value="Excluir" styleClass="btn btn-inverse">
+                            <f:param name="idExame" value="#{exame.idExame}"/>
+                        </h:commandButton>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+          </h:body>
+      </f:view>
+   </div>
+</html>
+
