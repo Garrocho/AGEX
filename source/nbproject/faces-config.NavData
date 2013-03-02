@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="listagem_agenda.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="listagem_paciente.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="listagem_medico.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="listagem_exame.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="cadastro_medico.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="cabecalho.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="altera_medico.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="altera_paciente.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="cadastro_agenda.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="cadastro_paciente.xhtml" x="400" y="150" zoom="true"/>
+        <Node id="menu.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="cadastro_exame.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="altera_agenda.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="altera_exame.xhtml" x="650" y="300" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

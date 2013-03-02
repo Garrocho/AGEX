@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+    <managed-bean>
+            <managed-bean-name>PacienteBean</managed-bean-name>
+            <managed-bean-class>com.agex.control.PacienteBean</managed-bean-class>
+            <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+            <managed-bean-name>MedicoBean</managed-bean-name>
+            <managed-bean-class>com.agex.control.MedicoBean</managed-bean-class>
+            <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+            <managed-bean-name>ExameBean</managed-bean-name>
+            <managed-bean-class>com.agex.control.ExameBean</managed-bean-class>
+            <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+            <managed-bean-name>AgendaBean</managed-bean-name>
+            <managed-bean-class>com.agex.control.AgendaBean</managed-bean-class>
+            <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <navigation-rule>
+        <from-view-id>/listagem_exame.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>carrega</from-outcome>
+            <to-view-id>/altera_exame.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/listagem_paciente.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>carrega</from-outcome>
+            <to-view-id>/altera_paciente.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/listagem_medico.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>carrega</from-outcome>
+            <to-view-id>/altera_medico.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/listagem_agenda.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>carrega</from-outcome>
+            <to-view-id>/altera_agenda.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>
